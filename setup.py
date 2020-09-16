@@ -15,7 +15,7 @@ with open('requirements.txt') as f:
             REQUIRES.append(line)
 
 setup(name='Mijn Simpel Client',
-      version='0.0',
+      version='1.0',
       description='Python Client to Mijn Simpel',
       author='Aleksandr Vinokurov',
       author_email="",
