@@ -41,10 +41,10 @@ The cli goes with a *--help*, so try::
 
 It also recognize these environment variables:
 
-* `MIJN_SIMPEL_USERNAME`
-* `MIJN_SIMPEL_PASSWORD`
-* `MIJN_SIMPEL_SUBSCRIPTION_ID`
-* `MIJN_SIMPEL_COOKIE_JAR`
+* *MIJN_SIMPEL_USERNAME*
+* *MIJN_SIMPEL_PASSWORD*
+* *MIJN_SIMPEL_SUBSCRIPTION_ID*
+* *MIJN_SIMPEL_COOKIE_JAR*
 
 
 Using in Python
