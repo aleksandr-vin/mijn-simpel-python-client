@@ -11,6 +11,7 @@ Installation
 
 Install the cli (and the Python module `mijn_simpel`):
 
+..
     pip install .
 
 
@@ -19,6 +20,7 @@ Using CLI
 
 The cli goes with a `--help`, so try:
 
+::
     mijn-simpel --help
 
     Usage: mijn-simpel [OPTIONS] COMMAND [ARGS]...
@@ -52,6 +54,7 @@ Hacking
 
 Try installing with:
 
+::
     pip install -e .
 
 And then you can modify the source code and use it right away.
