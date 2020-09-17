@@ -17,8 +17,8 @@ with open('requirements.txt') as f:
 with open("README.rst", "r") as fh:
     long_description = fh.read()
 
-setup(name='Mijn Simpel Client',
-      version='0.2',
+setup(name='MijnSimpel',
+      version='0.3',
       license='MIT',
       description='Python Client to Mijn Simpel',
       long_description=long_description,
@@ -26,7 +26,7 @@ setup(name='Mijn Simpel Client',
       author='Aleksandr Vinokurov',
       author_email="aleksandr.vin@gmail.com",
       url='https://github.com/aleksandr-vin/mijn-simpel-python-client',
-      download_url = 'https://github.com/aleksandr-vin/mijn-simpel-python-client/archive/v0.2.tar.gz',
+      download_url = 'https://github.com/aleksandr-vin/mijn-simpel-python-client/archive/v0.3.tar.gz',
       keywords = ['scraping', 'mijn-simpel', 'telecom', 'usage', 'cli', 'client', 'simpel', 'nl'],
       packages=['mijn_simpel'],
       install_requires=REQUIRES,
