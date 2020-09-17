@@ -14,10 +14,15 @@ with open('requirements.txt') as f:
         else:
             REQUIRES.append(line)
 
+with open("README.rst", "r") as fh:
+    long_description = fh.read()
+
 setup(name='Mijn Simpel Client',
-      version='0.1',
+      version='0.2',
       license='MIT',
       description='Python Client to Mijn Simpel',
+      long_description=long_description,
+      long_description_content_type="text/x-rst",
       author='Aleksandr Vinokurov',
       author_email="aleksandr.vin@gmail.com",
       url='https://github.com/aleksandr-vin/mijn-simpel-python-client',
