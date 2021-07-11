@@ -3,10 +3,6 @@ import http.cookiejar
 from pathlib import Path
 import os, stat
 
-def _url(path):
-    return 'https://mijn.simpel.nl/api/' + path
-#    return 'http://localhost:4444/api/' + path
-
 
 class ApiError(Exception):
     """An API Error Exception"""
@@ -29,6 +25,9 @@ class Session():
         except FileNotFoundError:
             pass
 
+    def _url(path):
+        return 'https://api.simpel.nl/' + path
+
     def close(self):
         self.s.close()
 
@@ -37,10 +36,10 @@ class Session():
         os.chmod(self.s.cookies.filename, stat.S_IREAD | stat.S_IWRITE)
 
     def login(self, username, password):
-        resp = self.s.post(_url('login'), json={
+        resp = self.s.post(Session._url('login'), json={
             "username": username,
             "password": password,
-            "remember": None
+            "remember": True
         })
         if resp.status_code != 200:
             raise ApiError(resp)
@@ -49,7 +48,7 @@ class Session():
             return True
 
     def account_subscription_overview(self):
-        resp = self.s.get(_url('account/subscription-overview'))
+        resp = self.s.get(Session._url('account/subscription-overview'))
         if resp.status_code != 200:
             raise ApiError(resp)
         else:
@@ -65,8 +64,11 @@ class Subscription():
         self.s = session
         self.sid = sid
 
+    def _url(path):
+        return 'https://mijn.simpel.nl/api/' + path
+
     def get(self, path):
-        resp = self.s.s.get(_url(path), params={
+        resp = self.s.s.get(Subscription._url(path), params={
             "sid": self.sid
         })
         if resp.status_code != 200:
