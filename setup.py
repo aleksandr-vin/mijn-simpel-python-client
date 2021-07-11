@@ -24,7 +24,7 @@ with open("README.rst", "r") as fh:
     long_description = fh.read()
 
 setup(name='MijnSimpel',
-      version='0.5',
+      version='0.6',
       license='MIT',
       description='Python Client to Mijn Simpel',
       long_description=long_description,
